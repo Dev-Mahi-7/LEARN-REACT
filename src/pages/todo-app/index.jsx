@@ -75,18 +75,18 @@ const TodoAppContgainer = () => {
   console.log(filter);
 
   return (
-    <div className="h-screen bg-slate-950  overflow-y-hidden">
+    <div className="h-screen bg-slate-950 pt-3  overflow-y-hidden">
       <div className="max-w-3xl mx-auto h-[98vh] ">
         {/* Form */}
-        <div className="todo-form bg-amber-50 p-5 flex gap-3 border">
+        <div className="todo-form border border-slate-600 bg-linear-to-tr from-slate-700 via-slate-900 to-slate-950 p-5 flex gap-3">
           <div className="input-field flex-1">
-            <Label htmlFor="title" className="mb-3 text-xl block">
+            <Label htmlFor="title" className="mb-3 text-xl block text-white">
               Enter Todo Text
             </Label>
               <Input
                 id="title"
                 type="text"
-                className="rounded-none h-12 w-full text-lg placeholder:text-lg bg-white px-4"
+                className="rounded-none h-12 w-full outline-0 border-none text-lg placeholder:text-lg bg-white px-4"
                 value={todoText}
                 placeholder="ex. Buy Milk"
                 onChange={(e) => setTodoText(e.target.value)}
@@ -99,6 +99,7 @@ const TodoAppContgainer = () => {
           </div>
 
           <Button
+          variant={`${editedId ? "outline":"secondary"}`}
             onClick={handleAddTodo}
             className={`${editedId ? "bg-green-600 hover:bg-green-900 " : ""} mt-9 cursor-pointer px-6 py-6`}
           >
@@ -107,7 +108,7 @@ const TodoAppContgainer = () => {
         </div>
 
         {/* filter */}
-        <div className="filter p-4 bg-cyan-100 flex items-center gap-6">
+        <div className="filter mt-3  flex items-center gap-6">
           <div
             title={"Select All"}
             className="all border px-3 bg-white py-2 flex items-center gap-3 cursor-pointer "
