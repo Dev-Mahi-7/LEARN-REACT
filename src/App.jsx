@@ -48,7 +48,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0b0c10] text-slate-100 font-sans selection:bg-rose-500 selection:text-white overflow-x-hidden relative flex items-center justify-center p-4 sm:p-8 lg:p-12">
+    <div className=" hidden min-h-screen bg-[#0b0c10] text-slate-100 font-sans selection:bg-rose-500 selection:text-white overflow-x-hidden relative  items-center justify-center p-4 sm:p-8 lg:p-12">
       {/* Subtle Background Ambient Glows */}
       <div className="absolute top-[-10%] left-[-10%] w-125 h-125 rounded-full bg-rose-500/10 blur-[120px] pointer-events-none" />
       <div className="absolute bottom-[-10%] right-[-10%] w-150 h-150 rounded-full bg-neutral-500/5 blur-[150px] pointer-events-none" />
